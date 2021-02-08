@@ -52,3 +52,7 @@ sudo apt-get install -y ros-noetic-rotate-recovery
 sudo apt-get install -y ros-noetic-map-saver
 sudo apt-get install -y ros-noetic-amcl
 sudo apt-get install -y ros-noetic-dwa-local-planner
+
+
+# necessary for compiling our own code
+cp -r ../nav_tester .
