@@ -1,0 +1,10 @@
+<launch>
+    <!-- Launch teleop controls and Turtlebot Gazebo Sim -->
+    <include file="$(find nav_tester)/launch/teleop_demo.launch"/>
+
+    <!-- Launch our configured SLAM node -->
+    <include file="$(find nav_tester)/launch/SLAM.launch"/>
+
+    <!-- Launch the RVIZ visualizer to view the created map -->
+    <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/>
+</launch>
