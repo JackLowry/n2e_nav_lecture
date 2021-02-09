@@ -1,4 +1,5 @@
 <launch>
+  <include file="$(find turtlebot_teleop)/launch/keyboard_teleop.launch"/>
   <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
     <arg name="world_file" value="$(find turtlebot_gazebo)/worlds/corridor.world"/>
   </include>
