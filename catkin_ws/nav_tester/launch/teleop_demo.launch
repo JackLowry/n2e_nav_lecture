@@ -1,6 +1,12 @@
 <launch>
-  <include file="$(find turtlebot_teleop)/launch/keyboard_teleop.launch"/>
+  <!-- Launch keyboard teleop controls -->
+  <arg name="use_teleop" default="true"/>
+
+  <include file="$(find turtlebot_teleop)/launch/keyboard_teleop.launch" if="$(arg use_teleop)"/>
+
+  <!-- Launch turtlebot gazebo simulation-->
   <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
     <arg name="world_file" value="$(find turtlebot_gazebo)/worlds/corridor.world"/>
   </include>
+  
 </launch> 
